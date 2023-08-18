@@ -7,36 +7,41 @@
  *
  * @author Yeoh Ming Zhe
  */
-import java.util.*;
 public class Q1 {
     
-      public static int countLetter(String str, char ch){
-      
-          int count = 0;
-          for(int i = 0; i < str.length(); i++){
-              if(str.charAt(i) == ch){
-                  count++;
-              }
-          }
-          
-          return count;
-      }
-      
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        savingAccount savingAcc = new savingAccount("123", 1000);
+        currentAccount currentAcc = new currentAccount("456", 1000);
+        
+        
+        //current
+        System.out.println("The current account " + currentAcc.getAccNo() + "has balance of " + currentAcc.getBalance() + " .");
+        currentAcc.deposit(100);
+        
+        
+        //deposit
+        System.out.println("The current account " + currentAcc.getAccNo() + "has balance of " + currentAcc.getBalance() + " after deposit.");
+        
+        
+        
+        currentAcc.withdraw(100);
+        
+        
+        if(!currentAcc.withdraw(2000)){
+            System.out.println("Withdrawal had exceed balance.");
+        }
+        
+        
+        //withdraw
+        System.out.println("The current account " + currentAcc.getAccNo() + " has balance of" + currentAcc.getBalance() + " after withdraw.");
+        
+        //saving account test
+        System.out.println("The saving account " + savingAcc.getAccNo() + " has balance of" + savingAcc.getBalance() + " withdraw.");
+        savingAcc.addInterest();
+        System.out.println("The saving account " + savingAcc.getAccNo() + " has balance of" + savingAcc.getBalance() + " after adding interest.");
+        
        
         
-        System.out.print("Enter a word: ");
-        String word = sc.nextLine();
         
-        System.out.print("Enter the letter you want to count: ");
-        char letter = sc.next().charAt(0);
-        
-        int occurences = countLetter(word, letter);
-        System.out.printf("%s contain %d%c\n", word,occurences,letter);
     }
-    
-    
-  
-    
 }
