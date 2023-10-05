@@ -32,6 +32,7 @@ public class TutorTest {
                 System.out.println("FullTimeTutor");
                 System.out.println("--------------");
                 System.out.print(tutor.toString());
+                System.out.println("Basic Salary: RM" + ((FullTimeTutor) tutor).getBasicSalary());
                 System.out.println("Salary: RM " + tutor.calculateSalary());
                 System.out.println();
                 System.out.println();

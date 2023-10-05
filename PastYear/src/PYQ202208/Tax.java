@@ -11,5 +11,5 @@ package PYQ202208;
 public interface Tax {
     
     double INCOMETAX = 0.02;
-    double calculateIncomeTax();
+   
 }

@@ -29,16 +29,12 @@ public abstract class Tutor implements Tax {
     protected abstract double calculateSalary();
    
     
-    @Override
-    public double calculateIncomeTax(){
-        return calculateSalary() * INCOMETAX;
-    }
     
     @Override
     public String toString(){
         String permitStatus = permit ? "Yes" : "No";
         return "Name: " + name +"\n"
-                + "Permit: " + permitStatus + "\n"
+                + "Teaching Permit: " + permitStatus + "\n"
                 + "Teaching Hours: " + teachingHours + "\n";
                 
     }
